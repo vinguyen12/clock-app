@@ -9,7 +9,7 @@ export const UserProvider: React.FC = ({children}) => {
         <context.Provider value={{
             user:user,
             set: (user:any) => {setUser(user)},
-            removeUser: () =>{setUser (undefined)}
+            removeUser: () =>{setUser ({firstName: ""})}
         }}>
             {children}
         </context.Provider>
